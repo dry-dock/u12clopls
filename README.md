@@ -21,32 +21,3 @@ Available clojure versions:
 7. redis 3.0
 8. selenium 2.45
 9. sqllite 3
-
-## How to use
-You can use this image to run clojure builds on Shippable. Just update your
-`shippable.yml` file and add the `build_image` directive. Here's a sample YML file to get you going:
-
-````````
-language: clojure
-
-lein:
-  - lein2
-
-services:
-  - elasticsearch
-  - memcached
-  - mongodb
-  - mysql
-  - postgres
-  - rabbitmq
-  - redis
-  - selenium
-  - sqllite
-
-build_image: drydock/u12clopls:prod
-
-# Running the test with Leiningen
-script:
-  - lein test
-
-`````````
